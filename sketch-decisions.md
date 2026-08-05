@@ -113,7 +113,52 @@ Dawn | Romance | Calls        ← tabs
 
 ---
 
-## 27 Open Questions (unanswered)
+## ✅ Resolved — 2026-08-05
+
+### The core model changed: **Y = species, not volume**
+
+Emily's clarification:
+
+> "בלחיצה על ציר הX לאורך הגבהים של ציר הY בהתאמה לכל סוג ציפור שצויינה מצד שמאל, יהיה הסאונד של אותה הציפור"
+
+**Each of the 10 birds in the left panel owns a row.** Y position selects *which bird*. X position selects *when*. Clicking a cell places that species at that time step.
+
+This is the **Online Sequencer model** — which Emily named as the functional reference. It replaces the free-placement / drag-onto-canvas model from sketch 1.
+
+**Consequence:** volume is no longer encoded by Y. It needs another home (per-row control) or drops from MVP. See Q-new-2.
+
+### Visual encoding (final)
+
+| Channel | Encodes |
+|---------|---------|
+| **Row (Y)** | Species |
+| **Fill color** | Species |
+| **Border** | Sound type — Emily to supply reference |
+| **Column (X)** | Time step |
+| **Width** | Duration (drag to extend) |
+
+Emily on color: *"כל סאונד של ציפור מקבל צבע אחר בהתאמה לסוג הציפור"* — color follows species. Row and color reinforce each other, as in Online Sequencer.
+
+### Other resolutions
+
+| Q | Answer |
+|---|--------|
+| **Q7** Draw mode in MVP? | **No — hide the toggle entirely.** Add it when there's something behind it. |
+| **Q10** What does Record capture? | **The composition → audio file.** No microphone. |
+| **Q8/Q9** Y as volume | **Superseded** — Y is species |
+| **Q5/Q6** Bird appearance | **Resolved** — fill = species color, border = sound type |
+
+### New questions this raises
+
+**Q-new-1.** What do the **Dawn / Romance / Calls tabs** do now? If rows are fixed to 10 species, do tabs switch which *sound type* you're placing (the border), or do they swap the bird list itself? *(Not every species has every type — Hoopoe has only "call" from Israel.)*
+
+**Q-new-2.** **Where does volume live?** Per-row slider in the panel? A control on each placed bird? Or dropped from MVP?
+
+**Q-new-3.** **Click-to-toggle or drag-from-panel?** With fixed rows, clicking a cell is the natural gesture (Song Maker / Online Sequencer). Is dragging from the panel still needed?
+
+---
+
+## Remaining Open Questions
 
 ### 1. Tabs — architecture
 
