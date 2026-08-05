@@ -65,12 +65,12 @@ There is no tool today that makes real bird sounds playable, arrangeable, and sh
 
 | # | Feature | Why |
 |---|---------|-----|
-| M1 | Canvas with bird placement | The product |
-| M2 | Place / move / delete birds | Core interaction |
+| M1 | Grid: 10 species rows × 16 time steps | The product |
+| M2 | Click a cell to toggle a call on/off | Core interaction |
 | M3 | Play / Stop / Loop | Hear the composition |
 | M4 | Precise audio timing (Tone.js) | Audio that doesn't stutter |
-| M5 | Bird library panel — species + call type | Add birds to canvas |
-| M6 | Y position = volume | Expressive control |
+| M5 | Species panel with sound-type tabs | Choose what gets placed |
+| M6 | Volume slider per row | Expressive control |
 | M7 | Audio loading states | Users know when audio is ready |
 | M8 | localStorage auto-save | Don't lose work on refresh |
 | M9 | Share via URL (state in URL params) | The viral mechanic |
@@ -215,16 +215,18 @@ There is no tool today that makes real bird sounds playable, arrangeable, and sh
 
 ## 9. Open Questions
 
-**27 questions from sketch 2 are unanswered.** See `sketch-decisions.md` for the full list. The blocking ones:
+**All architecture-blocking questions were resolved 2026-08-05.** See `sketch-decisions.md` → "The MVP Model — Complete".
 
-| Question | Owner |
-|----------|-------|
-| Is Y volume, or purely visual height? | Emily |
-| What exactly does Record capture? | Emily |
-| Are all birds the same purple square, or per-species visual? | Emily |
-| Is Draw mode in MVP or placeholder UI only? | Emily |
-| Which 4 species join the 6 to make 10? | Emily / Researcher |
-| What happens to placed birds when country changes? | Emily + CTO |
+Still open, but not blocking Phase 0–2:
+
+| Question | Owner | Needed by |
+|----------|-------|-----------|
+| Which 4 species join the 6 to make 10? | Emily + Researcher | Phase 3 |
+| What happens to placed birds when country changes? | Emily + CTO | Phase 3 |
+| Xeno-canto v3 key, or route via GBIF mirror? | CTO | **Phase 1** |
+| Empty / loading / error state design | Emily + Designer | Phase 5 |
+| Instagram Story share format | Emily | V2 |
+| Border style reference for sound types | Emily | Phase 2 |
 
 ---
 

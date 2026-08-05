@@ -148,13 +148,47 @@ Emily on color: *"כל סאונד של ציפור מקבל צבע אחר בהת�
 | **Q8/Q9** Y as volume | **Superseded** — Y is species |
 | **Q5/Q6** Bird appearance | **Resolved** — fill = species color, border = sound type |
 
-### New questions this raises
+### Follow-ups — also resolved 2026-08-05
 
-**Q-new-1.** What do the **Dawn / Romance / Calls tabs** do now? If rows are fixed to 10 species, do tabs switch which *sound type* you're placing (the border), or do they swap the bird list itself? *(Not every species has every type — Hoopoe has only "call" from Israel.)*
+**Tabs (Dawn / Romance / Calls):** they select **which sound type gets placed**. Rows stay fixed to the 10 species. Clicking a cell places that species' sound *of the currently selected tab's type* — which the border then encodes.
 
-**Q-new-2.** **Where does volume live?** Per-row slider in the panel? A control on each placed bird? Or dropped from MVP?
+→ **Handling missing types:** not every species has every type. Hoopoe has only "call" from Israel; Hooded Crow has no song. When a tab is active, species lacking that type must be visibly unavailable — greyed row, or the cell refuses placement. Recommend: grey the row label and disable its cells, so the constraint is visible rather than mysterious.
 
-**Q-new-3.** **Click-to-toggle or drag-from-panel?** With fixed rows, clicking a cell is the natural gesture (Song Maker / Online Sequencer). Is dragging from the panel still needed?
+**Volume:** **a slider per row**, in the left panel next to each species. Mixer-like and conventional.
+
+**Placement gesture:** **click-to-toggle.** With fixed rows, dragging from the panel is redundant — the row already identifies the species. This follows Online Sequencer and Chrome Music Lab. *(CTO decision, derived from the model rather than asked.)*
+
+---
+
+## The MVP Model — Complete
+
+```
+┌──────────────────┬────────────────────────────────────────┐
+│ Dawn Romance Calls│           ← 16 steps →                │
+├──────────────────┤                                        │
+│ 🐦 Hoopoe   ▬▬●  │  ·  █  ·  ·  █  ·  ·  ·  ·  ·  ·  ·   │
+│ 🐦 Bulbul   ▬▬●  │  █  ·  ·  █  ·  ·  █  ·  ·  ·  ·  ·   │
+│ 🐦 Swallow  ▬▬●  │  ·  ·  █  ·  ·  █  ·  ·  ·  ·  ·  ·   │
+│ 🐦 Crow     ▬▬●  │  ·  ·  ·  ·  █  ·  ·  ·  ·  ·  ·  ·   │
+│ ...              │                                        │
+│   ↑ volume       │              ↑ sky background          │
+└──────────────────┴────────────────────────────────────────┘
+  [⤴ Share] [⏺ Record]  (▶)  ──── waveform ────
+```
+
+| Element | Behavior |
+|---------|----------|
+| Row | One species, fixed |
+| Column | One of 16 time steps |
+| Click a cell | Toggles that species' call at that step |
+| Cell fill color | Species |
+| Cell border | Sound type (from active tab) |
+| Cell width | Duration — drag to extend |
+| Row slider | Volume for that species |
+| Tabs | Which sound type places next |
+| Background | Sky photo, swappable later |
+| Record | Renders the composition to an audio file |
+| Draw toggle | **Hidden in MVP** |
 
 ---
 
