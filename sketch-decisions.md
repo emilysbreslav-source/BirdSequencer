@@ -186,7 +186,7 @@ Emily on color: *"כל סאונד של ציפור מקבל צבע אחר בהת�
 | Cell width | Duration — drag to extend |
 | Row slider | Volume for that species |
 | Tabs | Which sound type places next |
-| Background | Sky photo, swappable later |
+| Background | **Sky photo behind the entire interface** — not just the grid. The panel, toolbar, and bottom bar all sit *over* the sky, presumably semi-transparent. Swappable later. |
 | Record | Renders the composition to an audio file |
 | Draw toggle | **Hidden in MVP** |
 
