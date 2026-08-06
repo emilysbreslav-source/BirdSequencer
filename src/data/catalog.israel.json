@@ -14,7 +14,7 @@
         "song": {
           "xcId": "1151468",
           "url": "https://xeno-canto.org/1151468",
-          "audio": "https://xeno-canto.org/1151468/download",
+          "audio": "/audio/xc1151468.mp3",
           "fileName": "XC1151468-XC_Upupa-epops-2_Veyreau_17062026-06h26.wav",
           "seconds": 5,
           "quality": "A",
@@ -29,7 +29,7 @@
         "calls": {
           "xcId": "1139490",
           "url": "https://xeno-canto.org/1139490",
-          "audio": "https://xeno-canto.org/1139490/download",
+          "audio": "/audio/xc1139490.mp3",
           "fileName": "XC1139490-UPUEPO_cri_260515_Madère.wav",
           "seconds": 2,
           "quality": "A",
@@ -54,7 +54,7 @@
         "song": {
           "xcId": "322398",
           "url": "https://xeno-canto.org/322398",
-          "audio": "https://xeno-canto.org/322398/download",
+          "audio": "/audio/xc322398.mp3",
           "fileName": "XC322398-Gelbsteissbülbül_20160410_0800_WadiSalvadora_Israel_31.519529, 35.386614_song_A.mp3",
           "seconds": 5,
           "quality": "A",
@@ -69,7 +69,7 @@
         "calls": {
           "xcId": "156868",
           "url": "https://xeno-canto.org/156868",
-          "audio": "https://xeno-canto.org/156868/download",
+          "audio": "/audio/xc156868.mp3",
           "fileName": "XC156868-WhiteSpectacledBulbul13nov2013BeitSheanIsrael.mp3",
           "seconds": 14,
           "quality": "B",
@@ -94,7 +94,7 @@
         "song": {
           "xcId": "727116",
           "url": "https://xeno-canto.org/727116",
-          "audio": "https://xeno-canto.org/727116/download",
+          "audio": "/audio/xc727116.mp3",
           "fileName": "XC727116-Ladusvala_06.mp3",
           "seconds": 9,
           "quality": "A",
@@ -109,7 +109,7 @@
         "calls": {
           "xcId": "740629",
           "url": "https://xeno-canto.org/740629",
-          "audio": "https://xeno-canto.org/740629/download",
+          "audio": "/audio/xc740629.mp3",
           "fileName": "XC740629-Ladusvala_07.mp3",
           "seconds": 6,
           "quality": "A",
@@ -134,7 +134,7 @@
         "calls": {
           "xcId": "464444",
           "url": "https://xeno-canto.org/464444",
-          "audio": "https://xeno-canto.org/464444/download",
+          "audio": "/audio/xc464444.mp3",
           "fileName": "XC464444-Hooded Crow calls eilat march 28 1149.mp3",
           "seconds": 6,
           "quality": "B",
@@ -159,7 +159,7 @@
         "song": {
           "xcId": "1061108",
           "url": "https://xeno-canto.org/1061108",
-          "audio": "https://xeno-canto.org/1061108/download",
+          "audio": "/audio/xc1061108.mp3",
           "fileName": "XC1061108-Cheveche.mp3",
           "seconds": 8,
           "quality": "A",
@@ -174,7 +174,7 @@
         "calls": {
           "xcId": "1063547",
           "url": "https://xeno-canto.org/1063547",
-          "audio": "https://xeno-canto.org/1063547/download",
+          "audio": "/audio/xc1063547.mp3",
           "fileName": "XC1063547-20251202_154648_07_36_little_owl.mp3",
           "seconds": 4,
           "quality": "A",
@@ -199,7 +199,7 @@
         "song": {
           "xcId": "1003913",
           "url": "https://xeno-canto.org/1003913",
-          "audio": "https://xeno-canto.org/1003913/download",
+          "audio": "/audio/xc1003913.mp3",
           "fileName": "XC1003913-REC_0000075.mp3",
           "seconds": 17,
           "quality": "B",
@@ -216,7 +216,7 @@
         "calls": {
           "xcId": "127484",
           "url": "https://xeno-canto.org/127484",
-          "audio": "https://xeno-canto.org/127484/download",
+          "audio": "/audio/xc127484.mp3",
           "fileName": "XC127484-House_Sparrow_5.mp3",
           "seconds": 15,
           "quality": "B",

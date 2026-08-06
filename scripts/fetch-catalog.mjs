@@ -10,7 +10,7 @@
  * which species actually have a usable recording for each sound type.
  */
 
-import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { SPECIES, SOUND_TYPES } from '../src/data/species.js';
@@ -147,12 +147,37 @@ function pickBest(recordings, xcTypes) {
   return scored[0] ?? null;
 }
 
-function toCatalogEntry(pick, source) {
+/**
+ * Downloads a recording into public/audio/ and returns its local path.
+ *
+ * The browser cannot fetch from xeno-canto.org directly — their bot protection
+ * blocks cross-origin requests that carry real browser fingerprints, even
+ * though curl gets a permissive CORS header. Serving the files ourselves also
+ * means one download total instead of one per visitor.
+ */
+async function download(recording) {
+  const dir = resolve(ROOT, 'public/audio');
+  mkdirSync(dir, { recursive: true });
+  const name = `xc${recording.id}.mp3`;
+  const path = resolve(dir, name);
+
+  if (existsSync(path)) return `/audio/${name}`;
+
+  const res = await fetch(recording.file, {
+    headers: { 'User-Agent': 'BirdSequencer/0.1 (non-commercial; attribution shown in app)' },
+  });
+  if (!res.ok) throw new Error(`audio download failed: HTTP ${res.status}`);
+  writeFileSync(path, Buffer.from(await res.arrayBuffer()));
+  await sleep(REQUEST_GAP_MS);
+  return `/audio/${name}`;
+}
+
+function toCatalogEntry(pick, source, audioPath) {
   const r = pick.recording;
   return {
     xcId: r.id,
     url: `https://xeno-canto.org/${r.id}`,
-    audio: r.file,
+    audio: audioPath,
     fileName: r['file-name'],
     seconds: pick.seconds,
     quality: r.q,
@@ -209,12 +234,18 @@ async function main() {
 
     for (const type of SOUND_TYPES) {
       const pick = pickBest(pool, type.xcTypes);
-      if (pick) {
-        const inCountry = pick.recording.cnt === COUNTRY;
-        sounds[type.id] = toCatalogEntry(pick, inCountry ? 'country' : 'global');
-        row[type.id] = `${pick.recording.q}${inCountry ? '' : '*'} ${pick.seconds}s`;
-      } else {
+      if (!pick) {
         row[type.id] = '—';
+        continue;
+      }
+      const inCountry = pick.recording.cnt === COUNTRY;
+      try {
+        const audioPath = await download(pick.recording);
+        sounds[type.id] = toCatalogEntry(pick, inCountry ? 'country' : 'global', audioPath);
+        row[type.id] = `${pick.recording.q}${inCountry ? '' : '*'} ${pick.seconds}s`;
+      } catch (e) {
+        row[type.id] = 'dl fail';
+        console.log(`\n     ${type.label}: ${e.message}`);
       }
     }
 
