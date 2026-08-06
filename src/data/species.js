@@ -8,16 +8,20 @@
  * Sound type is encoded separately, as the border.
  */
 
+/**
+ * Two tabs, because Xeno-canto only has two distinct things for these species.
+ *
+ * The sketch had three — Dawn / Romance / Calls — but no recording of any of
+ * our six is tagged `dawn song`, so Dawn and Romance both fell through to
+ * `song` and produced the identical file. Two tabs that differ beat three
+ * where two are the same.
+ *
+ * `xcTypes` lists the Xeno-canto `type:` values to accept, best match first.
+ */
 export const SOUND_TYPES = [
   {
-    id: 'dawn',
-    label: 'Dawn',
-    // Xeno-canto `type:` values to look for, best first.
-    xcTypes: ['dawn song', 'song'],
-  },
-  {
-    id: 'romance',
-    label: 'Romance',
+    id: 'song',
+    label: 'Song',
     xcTypes: ['song', 'subsong'],
   },
   {

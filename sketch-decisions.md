@@ -150,7 +150,11 @@ Emily on color: *"כל סאונד של ציפור מקבל צבע אחר בהת�
 
 ### Follow-ups — also resolved 2026-08-05
 
-**Tabs (Dawn / Romance / Calls):** they select **which sound type gets placed**. Rows stay fixed to the 10 species. Clicking a cell places that species' sound *of the currently selected tab's type* — which the border then encodes.
+**Tabs — now two, not three (revised 2026-08-06).** The sketch had Dawn / Romance / Calls. Building the catalog showed that **no recording of any of our six species is tagged `dawn song`** on Xeno-canto. Dawn and Romance both fell through to `song` and returned the identical file — two tabs, one sound.
+
+The only types that actually exist for these species are `song`, `call`, and `alarm call`. So the tabs are **Song** and **Calls**. A third can return when the catalog is large enough to support one.
+
+Tabs select **which sound type gets placed**. Rows stay fixed to the species. Clicking a cell places that species' sound *of the active tab's type* — which the border then encodes.
 
 → **Handling missing types:** not every species has every type. Hoopoe has only "call" from Israel; Hooded Crow has no song. When a tab is active, species lacking that type must be visibly unavailable — greyed row, or the cell refuses placement. Recommend: grey the row label and disable its cells, so the constraint is visible rather than mysterious.
 

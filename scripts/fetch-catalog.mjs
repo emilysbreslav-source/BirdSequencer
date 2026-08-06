@@ -18,9 +18,16 @@ import { SPECIES, SOUND_TYPES } from '../src/data/species.js';
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const COUNTRY = process.argv[2] ?? 'Israel';
 
-/** A sequencer step is short. Long field recordings are unusable as one hit. */
-const IDEAL_MAX_SECONDS = 12;
+/**
+ * A sequencer step is short, so length is graded rather than pass/fail.
+ * A single threshold made everything over it tie, and quality then picked
+ * a 34-second file over a 14-second one — the wrong way round for us.
+ */
+const LENGTH_BUCKETS = [8, 15, 25, 40];
 const HARD_MAX_SECONDS = 40;
+
+/** D and E are noisy or distant enough to be unpleasant. Never use them. */
+const WORST_USABLE_QUALITY = 'C';
 
 /** Xeno-canto asks that automated use stay gentle. One request per second. */
 const REQUEST_GAP_MS = 1100;
@@ -93,11 +100,25 @@ function hasType(recording, wanted) {
  * Ranks candidates for one sound type. In order of importance:
  *   1. the exact type we asked for, over a fallback type
  *   2. no other species audible — we want one bird, not a dawn chorus
- *   3. recording quality
- *   4. short enough to work as a single step
+ *   3. short enough to work as a single step
+ *   4. recording quality
+ *   5. shorter still
+ *
+ * Length outranks quality on purpose. A clean 3-second B beats a pristine
+ * 37-second A, because the long one is a bird calling repeatedly with gaps,
+ * not the single hit a sequencer step needs.
  */
+function lengthBucket(seconds) {
+  const i = LENGTH_BUCKETS.findIndex((limit) => seconds <= limit);
+  return i === -1 ? LENGTH_BUCKETS.length : i;
+}
+
 function pickBest(recordings, xcTypes) {
-  const usable = recordings.filter((r) => toSeconds(r.length) <= HARD_MAX_SECONDS);
+  const usable = recordings.filter(
+    (r) =>
+      toSeconds(r.length) <= HARD_MAX_SECONDS &&
+      (QUALITY_RANK[r.q] ?? 9) <= QUALITY_RANK[WORST_USABLE_QUALITY]
+  );
 
   const scored = usable
     .map((r) => {
@@ -109,7 +130,7 @@ function pickBest(recordings, xcTypes) {
         typeIndex,
         alone: (r.also ?? []).filter(Boolean).length === 0 ? 0 : 1,
         quality: QUALITY_RANK[r.q] ?? 9,
-        tooLong: seconds > IDEAL_MAX_SECONDS ? 1 : 0,
+        tooLong: lengthBucket(seconds),
         seconds,
       };
     })
@@ -118,8 +139,8 @@ function pickBest(recordings, xcTypes) {
       (a, b) =>
         a.typeIndex - b.typeIndex ||
         a.alone - b.alone ||
-        a.quality - b.quality ||
         a.tooLong - b.tooLong ||
+        a.quality - b.quality ||
         a.seconds - b.seconds
     );
 
