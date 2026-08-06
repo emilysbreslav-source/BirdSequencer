@@ -1,0 +1,311 @@
+{
+  "country": "Israel",
+  "generatedAt": "2026-08-06",
+  "attribution": "Recordings from xeno-canto.org, used under Creative Commons licenses. Each recordist is credited in the interface.",
+  "species": [
+    {
+      "id": "hoopoe",
+      "en": "Hoopoe",
+      "he": "דוכיפת",
+      "latin": "Upupa epops",
+      "shape": "diamond",
+      "color": "var(--species-hoopoe)",
+      "sounds": {
+        "dawn": {
+          "xcId": "1151468",
+          "url": "https://xeno-canto.org/1151468",
+          "audio": "https://xeno-canto.org/1151468/download",
+          "fileName": "XC1151468-XC_Upupa-epops-2_Veyreau_17062026-06h26.wav",
+          "seconds": 5,
+          "quality": "A",
+          "xcType": "song",
+          "country": "France",
+          "location": "Arrondissement de Millau (near  Veyreau), Aveyron, Occitanie",
+          "recordist": "Lionel Triboulin",
+          "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "alsoAudible": [],
+          "source": "global"
+        },
+        "romance": {
+          "xcId": "1151468",
+          "url": "https://xeno-canto.org/1151468",
+          "audio": "https://xeno-canto.org/1151468/download",
+          "fileName": "XC1151468-XC_Upupa-epops-2_Veyreau_17062026-06h26.wav",
+          "seconds": 5,
+          "quality": "A",
+          "xcType": "song",
+          "country": "France",
+          "location": "Arrondissement de Millau (near  Veyreau), Aveyron, Occitanie",
+          "recordist": "Lionel Triboulin",
+          "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "alsoAudible": [],
+          "source": "global"
+        },
+        "calls": {
+          "xcId": "1139490",
+          "url": "https://xeno-canto.org/1139490",
+          "audio": "https://xeno-canto.org/1139490/download",
+          "fileName": "XC1139490-UPUEPO_cri_260515_Madère.wav",
+          "seconds": 2,
+          "quality": "A",
+          "xcType": "call",
+          "country": "Portugal",
+          "location": "Ponta do Rosto, Madeira",
+          "recordist": "Lionel FREDERIC",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "alsoAudible": [],
+          "source": "global"
+        }
+      }
+    },
+    {
+      "id": "bulbul",
+      "en": "White-spectacled Bulbul",
+      "he": "בולבול",
+      "latin": "Pycnonotus xanthopygos",
+      "shape": "circle",
+      "color": "var(--species-bulbul)",
+      "sounds": {
+        "dawn": {
+          "xcId": "322398",
+          "url": "https://xeno-canto.org/322398",
+          "audio": "https://xeno-canto.org/322398/download",
+          "fileName": "XC322398-Gelbsteissbülbül_20160410_0800_WadiSalvadora_Israel_31.519529, 35.386614_song_A.mp3",
+          "seconds": 5,
+          "quality": "A",
+          "xcType": "song",
+          "country": "Israel",
+          "location": "Dead Sea Region, Be'er Sheva, South District",
+          "recordist": "Thomas Lüthi",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "alsoAudible": [],
+          "source": "country"
+        },
+        "romance": {
+          "xcId": "322398",
+          "url": "https://xeno-canto.org/322398",
+          "audio": "https://xeno-canto.org/322398/download",
+          "fileName": "XC322398-Gelbsteissbülbül_20160410_0800_WadiSalvadora_Israel_31.519529, 35.386614_song_A.mp3",
+          "seconds": 5,
+          "quality": "A",
+          "xcType": "song",
+          "country": "Israel",
+          "location": "Dead Sea Region, Be'er Sheva, South District",
+          "recordist": "Thomas Lüthi",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "alsoAudible": [],
+          "source": "country"
+        },
+        "calls": {
+          "xcId": "779950",
+          "url": "https://xeno-canto.org/779950",
+          "audio": "https://xeno-canto.org/779950/download",
+          "fileName": "XC779950-bilbil_Izrael_230110_10.mp3",
+          "seconds": 34,
+          "quality": "A",
+          "xcType": "call, song",
+          "country": "Israel",
+          "location": "International Birding and Research Centre Eilat (IBRCE)",
+          "recordist": "Marcin Sołowiej",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "alsoAudible": [],
+          "source": "country"
+        }
+      }
+    },
+    {
+      "id": "swallow",
+      "en": "Barn Swallow",
+      "he": "סנונית",
+      "latin": "Hirundo rustica",
+      "shape": "triangle",
+      "color": "var(--species-swallow)",
+      "sounds": {
+        "dawn": {
+          "xcId": "727116",
+          "url": "https://xeno-canto.org/727116",
+          "audio": "https://xeno-canto.org/727116/download",
+          "fileName": "XC727116-Ladusvala_06.mp3",
+          "seconds": 9,
+          "quality": "A",
+          "xcType": "call, song",
+          "country": "Sweden",
+          "location": "Holmögadd, Västerbottens län",
+          "recordist": "Lars Edenius",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "alsoAudible": [],
+          "source": "global"
+        },
+        "romance": {
+          "xcId": "727116",
+          "url": "https://xeno-canto.org/727116",
+          "audio": "https://xeno-canto.org/727116/download",
+          "fileName": "XC727116-Ladusvala_06.mp3",
+          "seconds": 9,
+          "quality": "A",
+          "xcType": "call, song",
+          "country": "Sweden",
+          "location": "Holmögadd, Västerbottens län",
+          "recordist": "Lars Edenius",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "alsoAudible": [],
+          "source": "global"
+        },
+        "calls": {
+          "xcId": "740629",
+          "url": "https://xeno-canto.org/740629",
+          "audio": "https://xeno-canto.org/740629/download",
+          "fileName": "XC740629-Ladusvala_07.mp3",
+          "seconds": 6,
+          "quality": "A",
+          "xcType": "call",
+          "country": "Sweden",
+          "location": "Djäkneböle, Umeå, Västerbottens län",
+          "recordist": "Lars Edenius",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "alsoAudible": [],
+          "source": "global"
+        }
+      }
+    },
+    {
+      "id": "crow",
+      "en": "Hooded Crow",
+      "he": "עורב אפור",
+      "latin": "Corvus cornix",
+      "shape": "square",
+      "color": "var(--species-crow)",
+      "sounds": {
+        "calls": {
+          "xcId": "464444",
+          "url": "https://xeno-canto.org/464444",
+          "audio": "https://xeno-canto.org/464444/download",
+          "fileName": "XC464444-Hooded Crow calls eilat march 28 1149.mp3",
+          "seconds": 6,
+          "quality": "B",
+          "xcType": "call",
+          "country": "Israel",
+          "location": "HaArava Region (near  Eilat), Be'er Sheva, South District",
+          "recordist": "Manuel Grosselet",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "alsoAudible": [],
+          "source": "country"
+        }
+      }
+    },
+    {
+      "id": "owl",
+      "en": "Little Owl",
+      "he": "כוס חורבות",
+      "latin": "Athene noctua",
+      "shape": "star",
+      "color": "var(--species-owl)",
+      "sounds": {
+        "dawn": {
+          "xcId": "1061108",
+          "url": "https://xeno-canto.org/1061108",
+          "audio": "https://xeno-canto.org/1061108/download",
+          "fileName": "XC1061108-Cheveche.mp3",
+          "seconds": 8,
+          "quality": "A",
+          "xcType": "song",
+          "country": "France",
+          "location": "Arrondissement de Sélestat-Erstein (near  Meistratzheim), Bas-Rhin, Grand Est",
+          "recordist": "Denis Dujardin",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "alsoAudible": [],
+          "source": "global"
+        },
+        "romance": {
+          "xcId": "1061108",
+          "url": "https://xeno-canto.org/1061108",
+          "audio": "https://xeno-canto.org/1061108/download",
+          "fileName": "XC1061108-Cheveche.mp3",
+          "seconds": 8,
+          "quality": "A",
+          "xcType": "song",
+          "country": "France",
+          "location": "Arrondissement de Sélestat-Erstein (near  Meistratzheim), Bas-Rhin, Grand Est",
+          "recordist": "Denis Dujardin",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "alsoAudible": [],
+          "source": "global"
+        },
+        "calls": {
+          "xcId": "1063547",
+          "url": "https://xeno-canto.org/1063547",
+          "audio": "https://xeno-canto.org/1063547/download",
+          "fileName": "XC1063547-20251202_154648_07_36_little_owl.mp3",
+          "seconds": 4,
+          "quality": "A",
+          "xcType": "alarm call, call",
+          "country": "France",
+          "location": "Arrondissement of Angoulême (near  La Couronne), Charente, Nouvelle-Aquitaine",
+          "recordist": "Tony Rinaud",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "alsoAudible": [],
+          "source": "global"
+        }
+      }
+    },
+    {
+      "id": "sparrow",
+      "en": "House Sparrow",
+      "he": "דרור",
+      "latin": "Passer domesticus",
+      "shape": "rectangle",
+      "color": "var(--species-sparrow)",
+      "sounds": {
+        "dawn": {
+          "xcId": "1003913",
+          "url": "https://xeno-canto.org/1003913",
+          "audio": "https://xeno-canto.org/1003913/download",
+          "fileName": "XC1003913-REC_0000075.mp3",
+          "seconds": 17,
+          "quality": "B",
+          "xcType": "song",
+          "country": "Israel",
+          "location": "HaRav Blau/Ahinoam (near  Jerusalem), Jerusalem District",
+          "recordist": "YAAKOV LIF",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "alsoAudible": [
+            "Spilopelia senegalensis"
+          ],
+          "source": "country"
+        },
+        "romance": {
+          "xcId": "1003913",
+          "url": "https://xeno-canto.org/1003913",
+          "audio": "https://xeno-canto.org/1003913/download",
+          "fileName": "XC1003913-REC_0000075.mp3",
+          "seconds": 17,
+          "quality": "B",
+          "xcType": "song",
+          "country": "Israel",
+          "location": "HaRav Blau/Ahinoam (near  Jerusalem), Jerusalem District",
+          "recordist": "YAAKOV LIF",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "alsoAudible": [
+            "Spilopelia senegalensis"
+          ],
+          "source": "country"
+        },
+        "calls": {
+          "xcId": "464442",
+          "url": "https://xeno-canto.org/464442",
+          "audio": "https://xeno-canto.org/464442/download",
+          "fileName": "XC464442-House Sparrow calls male eilat march 28 1142.mp3",
+          "seconds": 37,
+          "quality": "A",
+          "xcType": "call",
+          "country": "Israel",
+          "location": "HaArava Region (near  Eilat), Be'er Sheva, South District",
+          "recordist": "Manuel Grosselet",
+          "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "alsoAudible": [],
+          "source": "country"
+        }
+      }
+    }
+  ]
+}
