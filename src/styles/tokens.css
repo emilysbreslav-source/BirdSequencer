@@ -1,0 +1,144 @@
+/* ============================================================
+   BirdSequencer — design tokens
+   Every color, spacing, and timing value lives here.
+   Nothing hardcoded in components.
+   ============================================================ */
+
+:root {
+  /* ---------- Background ----------
+     The sky sits behind the ENTIRE interface, not just the grid.
+     Swap --sky-image for a photograph when Emily supplies one:
+       --sky-image: url('/sky/default.jpg');
+     The gradient below is a placeholder standing in for that photo. */
+  --sky-image: linear-gradient(
+    to bottom,
+    #2b7fd4 0%,
+    #4a9ee0 28%,
+    #7cc0ee 58%,
+    #b8ddf5 82%,
+    #dcefff 100%
+  );
+
+  /* ---------- Surfaces over the sky ----------
+     Panels are translucent so the sky reads through them. */
+  --surface: rgba(255, 255, 255, 0.82);
+  --surface-strong: rgba(255, 255, 255, 0.94);
+  --surface-hover: rgba(255, 255, 255, 0.98);
+  --surface-sunken: rgba(255, 255, 255, 0.55);
+  --border: rgba(15, 40, 70, 0.14);
+  --border-strong: rgba(15, 40, 70, 0.26);
+
+  /* ---------- Grid ---------- */
+  --grid-line: rgba(255, 255, 255, 0.30);
+  --grid-line-bar: rgba(255, 255, 255, 0.52); /* every 4th step */
+  --cell-empty: rgba(255, 255, 255, 0.07);
+  --cell-hover: rgba(255, 255, 255, 0.22);
+  --playhead: rgba(255, 255, 255, 0.85);
+  --playhead-glow: rgba(255, 255, 255, 0.35);
+
+  /* ---------- Text ---------- */
+  --text: #10243c;
+  --text-muted: #4a627d;
+  --text-disabled: #8fa3b8;
+  --text-on-sky: #ffffff;
+
+  /* ---------- Species colors ----------
+     NOTE: chosen when the background was dark ("Night Garden").
+     Contrast over a bright sky is unverified — needs a design pass. */
+  --species-hoopoe: #c9a45a;
+  --species-bulbul: #7fb68e;
+  --species-swallow: #5b8fbd;
+  --species-crow: #9b8fc4;
+  --species-owl: #d4926a;
+  --species-sparrow: #4db6ac;
+
+  /* ---------- Sound types ----------
+     Encoded as the cell BORDER, not the fill.
+     Emily is supplying a visual reference — these are placeholders. */
+  --sound-dawn-border: 2px solid rgba(255, 255, 255, 0.95);
+  --sound-romance-border: 2px dashed rgba(255, 255, 255, 0.95);
+  --sound-calls-border: 2px dotted rgba(255, 255, 255, 0.95);
+
+  /* ---------- Layout ---------- */
+  --panel-width: 25%;
+  --panel-width-min: 260px;
+  --row-height: 52px;
+  --toolbar-height: 60px;
+  --transport-height: 84px;
+
+  /* ---------- Spacing ---------- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+
+  /* ---------- Radius ---------- */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 14px;
+  --radius-pill: 999px;
+
+  /* ---------- Elevation ---------- */
+  --shadow-panel: 0 4px 24px rgba(10, 35, 65, 0.16);
+  --shadow-raised: 0 2px 8px rgba(10, 35, 65, 0.20);
+
+  /* ---------- Type ---------- */
+  --font: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --text-xs: 11px;
+  --text-sm: 13px;
+  --text-base: 15px;
+  --text-lg: 18px;
+
+  /* ---------- Motion ----------
+     Audio timing is never derived from these.
+     Tone.Transport drives sound; these drive pixels only. */
+  --dur-instant: 80ms;
+  --dur-pulse: 120ms;
+  --dur-panel: 220ms;
+  --ease-out: cubic-bezier(0.22, 0.8, 0.36, 1);
+}
+
+/* ---------- Reset ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font);
+  font-size: var(--text-base);
+  color: var(--text);
+  background: var(--sky-image);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* ---------- Reduced motion ----------
+   Visual only. Audio scheduling is unaffected. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

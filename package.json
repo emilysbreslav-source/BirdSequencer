@@ -1,0 +1,21 @@
+{
+  "name": "bird-sequencer",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "A browser sequencer built from real bird recordings",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "tone": "^15.1.22"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.5",
+    "vite": "^8.2.0"
+  }
+}

@@ -1,0 +1,84 @@
+/* App shell — the three regions that sit over the sky.
+   Phase 0: structure only. No grid, no audio, no bird data. */
+
+.app {
+  display: grid;
+  grid-template-rows: var(--toolbar-height) 1fr var(--transport-height);
+  height: 100%;
+}
+
+/* ---------- Toolbar ---------- */
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 0 var(--space-4);
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+}
+
+.wordmark {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+/* ---------- Middle: panel + canvas ---------- */
+.main {
+  display: grid;
+  grid-template-columns: minmax(var(--panel-width-min), var(--panel-width)) 1fr;
+  min-height: 0;
+}
+
+.panel {
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+  overflow-y: auto;
+  padding: var(--space-4);
+}
+
+.canvas {
+  position: relative;
+  overflow: hidden;
+  padding: var(--space-4);
+}
+
+/* ---------- Transport ---------- */
+.transport {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: 0 var(--space-4);
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+}
+
+/* ---------- Scaffold placeholders ----------
+   Everything below is temporary and gets deleted in Phase 1–2. */
+.placeholder {
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+}
+
+.placeholderCanvas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: var(--space-2);
+  border: 1px dashed rgba(255, 255, 255, 0.5);
+  border-radius: var(--radius-lg);
+  color: var(--text-on-sky);
+  text-shadow: 0 1px 3px rgba(10, 35, 65, 0.45);
+}
+
+.placeholderTitle {
+  font-size: var(--text-lg);
+  font-weight: 600;
+}
