@@ -12,11 +12,19 @@ Users compose layered sequences from authentic bird calls — selecting species,
 
 ## Current Status
 
-**Phase:** Pre-build planning — interaction model finalized via two sketches, 27 open questions pending
-**Target:** MVP live in 2 weeks
-**Launch:** Public (anonymous, no user accounts required)
+**Phase 0 and Phase 1 are built and deployed.** Live at [bird-sequencer.vercel.app](https://bird-sequencer.vercel.app).
 
-⚠️ **The PRD below predates the second sketch.** See `sketch-decisions.md` for the current interaction model, which supersedes parts of this document.
+| Phase | State |
+|-------|-------|
+| 0 — scaffold | ✅ React + Vite + Tone.js, sky layout, deployed |
+| 1 — audio engine | ✅ Catalog script, 11 recordings downloaded, Tone.Transport loop |
+| 2 — grid | Next |
+
+**Blocking Phase 2:** nobody has confirmed the audio actually sounds right. Input events are not delivered to the page while the browser pane is hidden, so playback could not be verified by an agent. Emily needs to press play and report.
+
+**Known tuning need:** playback takes the first 1.8s of each recording. Field recordings often open with silence or handling noise, so some hits will need a per-recording offset.
+
+⚠️ **`sketch-decisions.md` is the current design.** It supersedes parts of `PRD.md`.
 
 ---
 
