@@ -18,7 +18,10 @@ Users compose layered sequences from authentic bird calls — selecting species,
 |-------|-------|
 | 0 — scaffold | ✅ React + Vite + Tone.js, sky layout, deployed |
 | 1 — audio engine | ✅ Catalog script, 11 recordings downloaded, Tone.Transport loop |
-| 2 — grid | Next |
+| 2 — grid | ✅ 6 rows × 16 steps, Song/Calls tabs, click to place |
+| 3 — controls | Next: volume per row, share, record, waveform, country picker |
+
+**Still to build from the sketch:** volume slider per row, Share, Record, live waveform, country picker, background swap, and 5 more species to reach the 11 in the panel.
 
 **Blocking Phase 2:** nobody has confirmed the audio actually sounds right. Input events are not delivered to the page while the browser pane is hidden, so playback could not be verified by an agent. Emily needs to press play and report.
 
