@@ -43,14 +43,15 @@
   --text-on-sky: #ffffff;
 
   /* ---------- Species colors ----------
-     NOTE: chosen when the background was dark ("Night Garden").
-     Contrast over a bright sky is unverified — needs a design pass. */
-  --species-hoopoe: #c9a45a;
-  --species-bulbul: #7fb68e;
-  --species-swallow: #5b8fbd;
-  --species-crow: #9b8fc4;
-  --species-owl: #d4926a;
-  --species-sparrow: #4db6ac;
+     Saturated on purpose, taken from Emily's sketch. The earlier muted
+     palette was picked for a dark background; against a bright sky those
+     colors sank into it. These sit on top of it. */
+  --species-hoopoe: #ff8c2e;   /* orange */
+  --species-bulbul: #5eff3e;   /* green */
+  --species-swallow: #4a3fe8;  /* blue-violet — deliberately not sky blue */
+  --species-crow: #9b3fff;     /* purple */
+  --species-owl: #e4ff00;      /* lime */
+  --species-sparrow: #4dfff5;  /* cyan */
 
   /* ---------- Sound types ----------
      Encoded as the cell BORDER, not the fill.
@@ -63,6 +64,7 @@
   --panel-width: 25%;
   --panel-width-min: 260px;
   --row-height: 52px;
+  --header-row-height: 38px; /* tabs and step ruler share this row */
   --toolbar-height: 60px;
   --transport-height: 84px;
 
